@@ -74,7 +74,7 @@ public class ImprovedPoV_Mirror : MVRScript
         OnDisable();
     }
 
-    private voidReplaceMirrorScriptAndCreatedObjects()
+    private void ReplaceMirrorScriptAndCreatedObjects()
     {
         foreach (var childMirror in _mirror.GetComponentsInChildren<MirrorReflection>())
         {
