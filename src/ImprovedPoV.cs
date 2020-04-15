@@ -532,8 +532,8 @@ public class ImprovedPoV : MVRScript
 
             foreach (var material in skin.GPUmaterials)
             {
-                if (!MaterialsToHide.Any(materialToHide => material.name.StartsWith(materialToHide)))
-                    continue;
+                // if (!MaterialsToHide.Any(materialToHide => material.name.StartsWith(materialToHide)))
+                //     continue;
 
                 materials.Add(material);
             }
@@ -554,6 +554,7 @@ public class ImprovedPoV : MVRScript
                 { "Custom/Subsurface/GlossNMCullComputeBuff", Shader.Find("Custom/Subsurface/TransparentGlossNMSeparateAlphaComputeBuff") },
                 { "Custom/Subsurface/GlossNMDetailCullComputeBuff", Shader.Find("Custom/Subsurface/TransparentGlossNMDetailNoCullSeparateAlphaComputeBuff") },
                 { "Custom/Subsurface/CullComputeBuff", Shader.Find("Custom/Subsurface/TransparentSeparateAlphaComputeBuff") },
+                { "Custom/Subsurface/GlossNMTessMappedFixedComputeBuff", Shader.Find("Custom/Subsurface/TransparentSeparateAlphaComputeBuff") },
 
                 // Transparent materials
                 { "Custom/Subsurface/TransparentGlossNoCullSeparateAlphaComputeBuff", null },
